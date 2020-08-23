@@ -1,38 +1,214 @@
 .App {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
+.App .sidebar {
+  background-color: #d6e4ff;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .sidebar .App-header {
+  background-color: #282c34;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  height: 100px;
+}
+
+.App .sidebar .App-header .App-logo {
+  height: 50px;
   pointer-events: none;
+}
+
+.App .sidebar .menubar {
+  -webkit-box-flex: 0.9;
+      -ms-flex-positive: 0.9;
+          flex-grow: 0.9;
+}
+
+.App .sidebar .menubar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.App .sidebar .menubar ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.App .sidebar .menubar ul li a {
+  display: inline-block;
+  border-left: 8px solid #61dafb;
+  background-color: #d6e4ff;
+  padding: 3px 10px;
+  text-decoration: none;
+  color: #282c34;
+  width: 100%;
+  margin: 0px 0px;
+  text-align: left;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App .sidebar .menubar ul a:hover {
+  color: white;
+  border-left: 8px solid #990033;
+  background-color: #474655;
+}
+
+.App .mainview {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+  background-color: #fafeff;
+}
+
+.App .mainview input {
+  display: none;
+}
+
+.App .mainview label {
+  background-color: #008cff;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.App .mainview label:hover {
+  background-color: #5db6ff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .mainview .downloadview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.App .mainview .downloadview div {
+  -ms-flex-preferred-size: 50px;
+      flex-basis: 50px;
+}
+
+.App .mainview .uploadbutton {
+  display: inline-block;
+  background-color: #008cff;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.App .mainview .uploadbutton:hover {
+  background-color: #5db6ff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .mainview .csvsample {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 4px;
+}
+
+.App .mainview table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.App .mainview table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+.App .mainview table tr:first-child {
+  background-color: #61dafb;
+}
+
+.App .mainview table tr:nth-of-type(n + 2):hover {
+  background-color: #d4f0fd;
+}
+
+.App .mainview table th,
+.App .mainview table td {
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    -webkit-animation: App-logo-spin infinite 20s linear;
+            animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+/*# sourceMappingURL=App.css.map */

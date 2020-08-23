@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vh;
+  .sidebar {
+    background-color: #d6e4ff;
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+    .App-header {
+      background-color: #282c34;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      height: 100px;
+
+      .App-logo {
+        height: 50px;
+        pointer-events: none;
+      }
+    }
+
+    .menubar {
+      flex-grow: 0.9;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+        // width: 100%;
+        li {
+          display: inline-block;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          a {
+            display: inline-block;
+            border-left: 8px solid #61dafb;
+            background-color: #d6e4ff;
+            padding: 3px 10px;
+            text-decoration: none;
+            color: #282c34;
+            width: 100%;
+            margin: 0px 0px;
+            text-align: left;
+            font-size: 14px;
+            box-sizing: border-box;
+          }
+        }
+        a:hover {
+          color: white;
+          border-left: 8px solid #990033;
+          background-color: #474655;
+        }
+      }
+    }
+  }
+
+  .mainview {
+    flex-grow: 1;
+    flex-basis: 100px;
+    background-color: #fafeff;
+
+    input {
+      display: none;
+    }
+    label {
+      background-color: #008cff;
+      color: white;
+      padding: 6px;
+      border-radius: 6px;
+      display: inline-block;
+      cursor: pointer;
+      &:hover {
+        background-color: #5db6ff;
+        transition: 0.3s;
+      }
+    }
+    .downloadview{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      div{
+        flex-basis: 50px;
+      }
+
+    }
+
+    .uploadbutton {
+      display: inline-block;
+      background-color: #008cff;
+      color: white;
+      border: none;
+      padding: 6px;
+      border-radius: 6px;
+      &:hover {
+        background-color: #5db6ff;
+        transition: 0.3s;
+      }
+    }
+
+    .csvsample{
+      display: inline-block;
+      background-color:orange ;
+      color: white;
+      border: none;
+      padding: 4px;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      tr {
+        display: flex;
+        border-bottom: solid 1px #eee;
+        cursor: pointer;
+      }
+
+      tr:first-child {
+        background-color: #61dafb;
+      }
+
+      tr:nth-of-type(n + 2) {
+        &:hover {
+          background-color: #d4f0fd;
+        }
+      }
+
+      th,
+      td {
+        text-align: center;
+        width: 25%;
+        padding: 15px 0;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
