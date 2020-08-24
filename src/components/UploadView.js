@@ -54,7 +54,7 @@ const UploadView = () => {
           アップロード
         </button>
       </div>
-      <div className="complete">アップロード完了</div>
+      {/* <div className="complete">アップロード完了</div> */}
     </div>
   );
 };
